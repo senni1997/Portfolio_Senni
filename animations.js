@@ -20,4 +20,26 @@ document.addEventListener("DOMContentLoaded", () => {
       btn.style.boxShadow = 'none';
     });
   });
+  // Функция проверки, виден ли элемент в viewport по вертикали
+function isInViewport(el, offset = 0) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top + offset <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.bottom >= 0
+  );
+}
+
+function handleSlideIn() {
+  const slideElems = document.querySelectorAll('.card-slide-in-left, .card-slide-in-right, .card-slide-in-up');
+  slideElems.forEach(el => {
+    if (isInViewport(el, -50)) {  // запускаем на 50 пикселей раньше появления
+      el.classList.add('active');
+    }
+  });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  handleSlideIn(); // Проверка сразу при загрузке страницы
+  window.addEventListener('scroll', handleSlideIn);
+});
 });

@@ -393,4 +393,31 @@ body {
   .hero__info h1 {
     font-size: 2rem;
   }
+  .card-slide-in-left,
+.card-slide-in-right,
+.card-slide-in-up {
+  opacity: 0;
+  transform: translateX(0) translateY(0);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  will-change: opacity, transform;
+}
+
+.card-slide-in-left {
+  transform: translateX(-50px);
+}
+
+.card-slide-in-right {
+  transform: translateX(50px);
+}
+
+.card-slide-in-up {
+  transform: translateY(50px);
+}
+
+.card-slide-in-left.active,
+.card-slide-in-right.active,
+.card-slide-in-up.active {
+  opacity: 1;
+  transform: translateX(0) translateY(0);
+}
 }
