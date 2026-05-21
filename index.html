@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Senni — Крутой лендинг</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="header">
+  <div class="container header__container">
+    <div class="logo">Senni</div>
+    <nav class="nav" id="nav-menu">
+      <ul class="nav__list">
+        <li><a href="#about" class="nav__link">О нас</a></li>
+        <li><a href="#services" class="nav__link">Услуги</a></li>
+        <li><a href="#portfolio" class="nav__link">Портфолио</a></li>
+        <li><a href="#contact" class="nav__link">Контакты</a></li>
+      </ul>
+    </nav>
+    <div class="burger" id="burger">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container hero__container">
+    <div class="hero__info">
+      <h1>Создаём дизайн мечты</h1>
+      <p>Брендинг, визуальный дизайн, коммуникации — всё, чтобы ваш проект выделялся и запоминался.</p>
+      <a href="#contact" class="btn btn-primary">Связаться</a>
+      <a href="#portfolio" class="btn btn-secondary">Посмотреть работы</a>
+    </div>
+    <div class="hero__image">
+      <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=700&q=80" alt="Креативный дизайн" />
+    </div>
+  </div>
+</section>
+
+<section id="about" class="section about">
+  <div class="container">
+    <h2>О нас</h2>
+    <div class="about__content">
+      <p>Мы — команда молодых и амбициозных дизайнеров, которые любят создавать уникальные бренды и interfaces с душой.</p>
+      <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=700&q=80" alt="Команда дизайнеров" />
+    </div>
+  </div>
+</section>
+
+<section id="services" class="section services">
+  <div class="container">
+    <h2>Наши услуги</h2>
+    <div class="services__grid">
+      <div class="service-card">
+        <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=400&q=80" alt="Брендинг" />
+        <h3>Брендинг</h3>
+        <p>Создаём уникальный стиль, чтобы клиенты узнали вас сразу.</p>
+      </div>
+      <div class="service-card">
+        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=400&q=80" alt="Визуальный дизайн" />
+        <h3>Визуальный дизайн</h3>
+        <p>Разрабатываем дизайн интерфейсов и коммуникаций, который работает.</p>
+      </div>
+      <div class="service-card">
+        <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=400&q=80" alt="Консалтинг" />
+        <h3>Консалтинг</h3>
+        <p>Помогаем выбрать стратегию и инструменты для продвижения.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="portfolio" class="section portfolio">
+  <div class="container">
+    <h2>Портфолио</h2>
+    <div class="portfolio__grid">
+      <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=400&q=80" alt="Проект 1" />
+      <img src="https://images.unsplash.com/photo-1503437313881-503a91226419?auto=format&fit=crop&w=400&q=80" alt="Проект 2" />
+      <img src="https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=400&q=80" alt="Проект 3" />
+      <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=400&q=80" alt="Проект 4" />
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="section contact">
+  <div class="container">
+    <h2>Связаться с нами</h2>
+    <form class="contact-form" action="#" method="post">
+      <input type="text" name="name" placeholder="Ваше имя" required />
+      <input type="email" name="email" placeholder="Email" required />
+      <textarea name="message" placeholder="Сообщение" rows="5" required></textarea>
+      <button type="submit" class="btn btn-primary">Отправить</button>
+    </form>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer__container">
+    <div>© 2024 Senni. Все права защищены.</div>
+    <div class="socials">
+      <a href="#" aria-label="Telegram" target="_blank" rel="noopener noreferrer">Telegram</a>
+      <a href="#" aria-label="GitHub" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="#" aria-label="Email" target="_blank" rel="noopener noreferrer">Email</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Бургер меню для мобилок
+  const burger = document.getElementById('burger');
+  const navMenu = document.getElementById('nav-menu');
+
+  burger.addEventListener('click', () => {
+    navMenu.classList.toggle('nav--active');
+    burger.classList.toggle('burger--active');
+  });
+</script>
+
+</body>
+</html>
